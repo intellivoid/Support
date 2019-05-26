@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d60073-3af3-4db4-b623-5140f7961b5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Intellivoid Support Manager.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Abstracts/ExceptionCodes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Abstracts/TicketStatus.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Exceptions/ConfigurationNotFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Support.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/configuration.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/support.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tables/support_tickets.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Support/Managers/TicketManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Intellivoid Support Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Intellivoid Support Manager.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Support/Support.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Support.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Support/Support.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+            <state relative-caret-position="221">
+              <caret line="13" column="105" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
               <folding>
                 <element signature="e#36#47#0#PHP" expanded="true" />
               </folding>
@@ -69,10 +65,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Support/Managers/TicketManager.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Support/Exceptions/ConfigurationNotFoundException.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
               <folding>
                 <element signature="e#48#62#0#PHP" expanded="true" />
               </folding>
@@ -95,20 +100,8 @@
         <option value="$PROJECT_DIR$/src/Support/Exceptions/Exceptions.php" />
         <option value="$PROJECT_DIR$/src/Support/Abstracts/ExceptionCodes.php" />
         <option value="$PROJECT_DIR$/src/Support/Exceptions/ConfigurationNotFoundException.php" />
+        <option value="$PROJECT_DIR$/src/Support/Managers/TicketManager.php" />
         <option value="$PROJECT_DIR$/src/Support/Support.php" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/Intellivoid Support Manager.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/dataSources.xml" />
-        <option value="$PROJECT_DIR$/.idea/webResources.xml" />
-        <option value="$PROJECT_DIR$/.idea/sqldialects.xml" />
       </list>
     </option>
   </component>
@@ -158,6 +151,13 @@
             <path>
               <item name="Intellivoid Support Manager" type="b2602c69:ProjectViewProjectNode" />
               <item name="Support" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Support" type="462c0819:PsiDirectoryNode" />
+              <item name="Managers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Intellivoid Support Manager" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Support" type="462c0819:PsiDirectoryNode" />
               <item name="tables" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -169,6 +169,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenBlu" />
@@ -198,12 +199,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558839265866</updated>
       <workItem from="1558839267091" duration="1308000" />
-      <workItem from="1558840784673" duration="378000" />
+      <workItem from="1558840784673" duration="1234000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1686000" />
+    <option name="totallyTimeSpent" value="2542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -223,7 +224,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32943144" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -283,17 +284,24 @@
     <entry file="file://$PROJECT_DIR$/src/Support/Exceptions/ConfigurationNotFoundException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
           <folding>
             <element signature="e#48#62#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Managers/TicketManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Support.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        <state relative-caret-position="221">
+          <caret line="13" column="105" selection-start-line="13" selection-start-column="105" selection-end-line="13" selection-end-column="105" />
           <folding>
             <element signature="e#36#47#0#PHP" expanded="true" />
           </folding>
