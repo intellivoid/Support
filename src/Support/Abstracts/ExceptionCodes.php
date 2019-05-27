@@ -10,4 +10,14 @@
     abstract class ExceptionCodes
     {
         const ConfigurationNotFoundException = 100;
+
+        const InvalidSubjectException = 101;
+
+        const InvalidMessageException = 102;
+
+        const InvalidSourceException = 103;
+
+        const DatabaseException = 104;
+
+        const InvalidEmailException = 105;
     }
