@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d60073-3af3-4db4-b623-5140f7961b5f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Exceptions/DatabaseException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Exceptions/InvalidEmailException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Exceptions/InvalidMessageException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Exceptions/InvalidSourceException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Exceptions/InvalidSubjectException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Objects/SupportTicket.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Utilities/Hashing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Support/Utilities/Validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Intellivoid Support Manager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Intellivoid Support Manager.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Support/Abstracts/ExceptionCodes.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Abstracts/ExceptionCodes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Support/Abstracts/TicketStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Abstracts/TicketStatus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Support/Managers/TicketManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Managers/TicketManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Support/Support.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Support.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Support/Objects/SupportTicket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Support/Objects/SupportTicket.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,10 +53,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Support/Objects/SupportTicket.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Support/Managers/TicketManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="227">
+              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
               <folding>
                 <element signature="e#45#80#0#PHP" expanded="true" />
               </folding>
@@ -80,47 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Support/Support.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-              <folding>
-                <element signature="e#36#47#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Support/Utilities/Hashing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="31" column="40" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Support/Objects/SupportTicket.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Support/Abstracts/TicketStatus.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="306">
+              <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -146,19 +103,19 @@
         <option value="$PROJECT_DIR$/src/Support/Exceptions/InvalidEmailException.php" />
         <option value="$PROJECT_DIR$/src/Support/Utilities/Validation.php" />
         <option value="$PROJECT_DIR$/src/Support/Utilities/Hashing.php" />
-        <option value="$PROJECT_DIR$/src/Support/Managers/TicketManager.php" />
-        <option value="$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php" />
         <option value="$PROJECT_DIR$/src/Support/Support.php" />
-        <option value="$PROJECT_DIR$/src/Support/Objects/SupportTicket.php" />
         <option value="$PROJECT_DIR$/src/Support/Abstracts/TicketStatus.php" />
+        <option value="$PROJECT_DIR$/src/Support/Objects/SupportTicket.php" />
+        <option value="$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php" />
+        <option value="$PROJECT_DIR$/src/Support/Managers/TicketManager.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="147" />
-    <option name="y" value="134" />
-    <option name="width" value="1026" />
-    <option name="height" value="554" />
+    <option name="x" value="56" />
+    <option name="y" value="29" />
+    <option name="width" value="1130" />
+    <option name="height" value="624" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -231,7 +188,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenBlu" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -261,18 +218,23 @@
       <workItem from="1558839267091" duration="1308000" />
       <workItem from="1558840784673" duration="1234000" />
       <workItem from="1558891060721" duration="3094000" />
-      <workItem from="1558959744868" duration="4798000" />
+      <workItem from="1558959744868" duration="6344000" />
+      <workItem from="1558969782178" duration="1261000" />
+      <workItem from="1558976446573" duration="598000" />
+      <workItem from="1559010782807" duration="37000" />
+      <workItem from="1559226592020" duration="961000" />
+      <workItem from="1559233803767" duration="136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10434000" />
+    <option name="totallyTimeSpent" value="14973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19213313" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20726173" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -291,7 +253,7 @@
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15506808" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.15506808" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
@@ -327,13 +289,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/support.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -414,27 +369,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Managers/TicketManager.php">
+    <entry file="file://$PROJECT_DIR$/src/Support/Abstracts/TicketStatus.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="96" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="e#45#80#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="493">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php">
+    <entry file="file://$PROJECT_DIR$/src/Support/support.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        <state relative-caret-position="17">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Support.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="36" lean-forward="true" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="19" selection-start-column="38" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="e#36#47#0#PHP" expanded="true" />
           </folding>
@@ -443,15 +395,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Support/Objects/SupportTicket.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="289">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Support/Abstracts/TicketStatus.php">
+    <entry file="file://$PROJECT_DIR$/src/Support/Abstracts/SupportTicketSearchMethod.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state relative-caret-position="306">
+          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Support/Managers/TicketManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+          <folding>
+            <element signature="e#45#80#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
