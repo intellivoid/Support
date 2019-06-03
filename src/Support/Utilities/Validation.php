@@ -91,4 +91,20 @@
 
             return true;
         }
+
+        /**
+         * Validates if the note is valid or not
+         *
+         * @param string $input
+         * @return bool
+         */
+        public static function note(string $input): bool
+        {
+            if(strlen($input) > 2500)
+            {
+                return false;
+            }
+
+            return true;
+        }
     }

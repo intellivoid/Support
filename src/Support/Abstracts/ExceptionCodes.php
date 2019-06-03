@@ -24,4 +24,6 @@
         const InvalidSearchMethodException = 106;
 
         const SupportTicketNotFoundException = 107;
+
+        const InvalidTicketNotesException = 108;
     }

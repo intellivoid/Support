@@ -11,6 +11,7 @@
     use Support\Exceptions\InvalidSearchMethodException;
     use Support\Exceptions\InvalidSourceException;
     use Support\Exceptions\InvalidSubjectException;
+    use Support\Exceptions\InvalidTicketNotesException;
     use Support\Exceptions\SupportTicketNotFoundException;
     use Support\Objects\SupportTicket;
     use Support\Support;
@@ -134,5 +135,68 @@
             }
 
             return SupportTicket::fromArray($QueryResults->fetch_array(MYSQLI_ASSOC));
+        }
+
+        /**
+         * Updates an existing support ticket in the database
+         *
+         * @param SupportTicket $supportTicket
+         * @return bool
+         * @throws DatabaseException
+         * @throws InvalidEmailException
+         * @throws InvalidMessageException
+         * @throws InvalidSearchMethodException
+         * @throws InvalidSourceException
+         * @throws InvalidSubjectException
+         * @throws InvalidTicketNotesException
+         * @throws SupportTicketNotFoundException
+         */
+        public function updateSupportTicket(SupportTicket $supportTicket): bool
+        {
+            // This will throw an exception if there is an issue trying to get the existing support ticket
+            $this->getSupportTicket(SupportTicketSearchMethod::byId, $supportTicket->ID);
+
+            if(Validation::email($supportTicket->ResponseEmail) == false)
+            {
+                throw new InvalidEmailException();
+            }
+
+            if(Validation::message($supportTicket->Message) == false)
+            {
+                throw new InvalidMessageException();
+            }
+
+            if(Validation::subject($supportTicket->Subject) == false)
+            {
+                throw new InvalidSubjectException();
+            }
+
+            if(Validation::source($supportTicket->Source) == false)
+            {
+                throw new InvalidSourceException();
+            }
+
+            if(Validation::note($supportTicket->TicketNotes) == false)
+            {
+                throw new InvalidTicketNotesException();
+            }
+
+            $ID = (int)$supportTicket->ID;
+            $Source = $this->support->getDatabase()->real_escape_string($supportTicket->Source);
+            $Subject = $this->support->getDatabase()->real_escape_string($supportTicket->Subject);
+            $Message = $this->support->getDatabase()->real_escape_string($supportTicket->Message);
+            $ResponseEmail = $this->support->getDatabase()->real_escape_string($supportTicket->ResponseEmail);
+            $TicketStatus = (int)$supportTicket->TicketStatus;
+            $TicketNotes = $this->support->getDatabase()->real_escape_string($supportTicket->TicketNotes);
+
+            $Query = "UPDATE `support_tickets` SET source='$Source', subject='$Subject', message='$Message', response_email='$ResponseEmail', ticket_status=$TicketStatus, ticket_notes='$TicketNotes' WHERE id=$ID";
+            $QueryResults = $this->support->getDatabase()->query($Query);
+
+            if($QueryResults == false)
+            {
+                throw new DatabaseException($Query, $this->support->getDatabase()->error);
+            }
+
+            return true;
         }
     }
