@@ -20,4 +20,8 @@
         const DatabaseException = 104;
 
         const InvalidEmailException = 105;
+
+        const InvalidSearchMethodException = 106;
+
+        const SupportTicketNotFoundException = 107;
     }

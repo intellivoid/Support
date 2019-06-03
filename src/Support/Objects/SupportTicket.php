@@ -49,7 +49,7 @@
          *
          * @var string
          */
-        public $ResponseEmasil;
+        public $ResponseEmail;
 
         /**
          * The current status of the ticket

@@ -3,12 +3,15 @@
 
     namespace Support\Managers;
 
+    use Support\Abstracts\SupportTicketSearchMethod;
     use Support\Abstracts\TicketStatus;
     use Support\Exceptions\DatabaseException;
     use Support\Exceptions\InvalidEmailException;
     use Support\Exceptions\InvalidMessageException;
+    use Support\Exceptions\InvalidSearchMethodException;
     use Support\Exceptions\InvalidSourceException;
     use Support\Exceptions\InvalidSubjectException;
+    use Support\Exceptions\SupportTicketNotFoundException;
     use Support\Objects\SupportTicket;
     use Support\Support;
     use Support\Utilities\Hashing;
@@ -40,11 +43,13 @@
          * @param string $message
          * @param string $email
          * @return SupportTicket
+         * @throws DatabaseException
+         * @throws InvalidEmailException
          * @throws InvalidMessageException
+         * @throws InvalidSearchMethodException
          * @throws InvalidSourceException
          * @throws InvalidSubjectException
-         * @throws InvalidEmailException
-         * @throws DatabaseException
+         * @throws SupportTicketNotFoundException
          */
         public function submitTicket(string $source, string $subject, string $message, string $email): SupportTicket
         {
@@ -83,17 +88,51 @@
 
             if($QueryResults == true)
             {
-                
+                $this->getSupportTicket(SupportTicketSearchMethod::byTicketNumber, $TicketNumber);
             }
-            else
+
+            throw new DatabaseException($Query, $this->support->getDatabase()->error);
+        }
+
+        /**
+         * @param string $search_method
+         * @param string $value
+         * @return SupportTicket
+         * @throws DatabaseException
+         * @throws InvalidSearchMethodException
+         * @throws SupportTicketNotFoundException
+         */
+        public function getSupportTicket(string $search_method, string $value): SupportTicket
+        {
+            switch($search_method)
+            {
+                case SupportTicketSearchMethod::byId:
+                    $search_method = $this->support->getDatabase()->real_escape_string($search_method);
+                    $value = (int)$value;
+                    break;
+
+                case SupportTicketSearchMethod::byTicketNumber:
+                    $search_method = $this->support->getDatabase()->real_escape_string($search_method);
+                    $value = "'" . $this->support->getDatabase()->real_escape_string($value) . "'";
+                    break;
+
+                default:
+                    throw new InvalidSearchMethodException();
+            }
+
+            $Query = "SELECT id, ticket_number, source, subject, message, response_email, ticket_status, ticket_notes, submission_timestamp FROM `support_tickets` WHERE $search_method=$value";
+            $QueryResults = $this->support->getDatabase()->query($Query);
+
+            if($QueryResults == false)
             {
                 throw new DatabaseException($Query, $this->support->getDatabase()->error);
             }
 
-        }
+            if ($QueryResults->num_rows !== 1)
+            {
+                throw new SupportTicketNotFoundException();
+            }
 
-        public function getSupportTicket(string $search_method, string $value): SupportTicket
-        {
-
+            return SupportTicket::fromArray($QueryResults->fetch_array(MYSQLI_ASSOC));
         }
     }
