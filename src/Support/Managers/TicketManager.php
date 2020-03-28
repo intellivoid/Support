@@ -211,7 +211,14 @@
             $TicketStatus = (int)$supportTicket->TicketStatus;
             $TicketNotes = $this->support->getDatabase()->real_escape_string($supportTicket->TicketNotes);
 
-            $Query = "UPDATE `support_tickets` SET source='$Source', subject='$Subject', message='$Message', response_email='$ResponseEmail', ticket_status=$TicketStatus, ticket_notes='$TicketNotes' WHERE id=$ID";
+            $Query = QueryBuilder::update('support_tickets', array(
+                'source' => $Source,
+                'subject' => $Subject,
+                'message' => $Message,
+                'response_email' => $ResponseEmail,
+                'ticket_status' => $TicketStatus,
+                'ticket_notes' => $TicketNotes
+            ), 'id', $ID);
             $QueryResults = $this->support->getDatabase()->query($Query);
 
             if($QueryResults == false)
