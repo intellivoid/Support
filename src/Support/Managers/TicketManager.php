@@ -3,6 +3,7 @@
 
     namespace Support\Managers;
 
+    use msqg\QueryBuilder;
     use Support\Abstracts\SupportTicketSearchMethod;
     use Support\Abstracts\TicketStatus;
     use Support\Exceptions\DatabaseException;
@@ -84,7 +85,18 @@
             $TicketStatus = (int)TicketStatus::Opened;
             $TicketNotes = $this->support->getDatabase()->real_escape_string('None');
 
-            $Query = "INSERT INTO `support_tickets` (ticket_number, source, subject, message, response_email, ticket_status, ticket_notes, submission_timestamp) VALUES ('$TicketNumber', '$Source', '$Subject', '$Message', '$ResponseEmail', $TicketStatus, '$TicketNotes', $CurrentTimestamp)";
+            $Query = QueryBuilder::insert_into(
+                'support_tickets', array(
+                    'ticket_number' => $TicketNumber,
+                    'source' => $Source,
+                    'subject' => $Subject,
+                    'message' => $Message,
+                    'response_email' => $ResponseEmail,
+                    'ticket_status' => $TicketStatus,
+                    'ticket_notes' => $TicketNotes,
+                    'submission_timestamp' => $CurrentTimestamp
+                )
+            );
             $QueryResults = $this->support->getDatabase()->query($Query);
 
             if($QueryResults == true)
