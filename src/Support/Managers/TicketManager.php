@@ -126,14 +126,24 @@
 
                 case SupportTicketSearchMethod::byTicketNumber:
                     $search_method = $this->support->getDatabase()->real_escape_string($search_method);
-                    $value = "'" . $this->support->getDatabase()->real_escape_string($value) . "'";
+                    $value = $this->support->getDatabase()->real_escape_string($value);
                     break;
 
                 default:
                     throw new InvalidSearchMethodException();
             }
 
-            $Query = "SELECT id, ticket_number, source, subject, message, response_email, ticket_status, ticket_notes, submission_timestamp FROM `support_tickets` WHERE $search_method=$value";
+            $Query = QueryBuilder::select('support_tickets', [
+                'id',
+                'ticket_number',
+                'source',
+                'subject',
+                'message',
+                'response_email',
+                'ticket_status',
+                'ticket_notes',
+                'submission_timestamp'
+            ], $search_method, $value);
             $QueryResults = $this->support->getDatabase()->query($Query);
 
             if($QueryResults == false)
