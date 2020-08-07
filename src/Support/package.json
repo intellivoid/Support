@@ -1,0 +1,99 @@
+{
+    "package": {
+        "package_name": "net.intellivoid.support",
+        "name": "Feedback Reporting Library",
+        "version": "1.0.0.6",
+        "author": "Zi Xing Narrakas",
+        "organization": "Intellivoid",
+        "description": "Allows users to send feedback",
+        "url": "https://github.com/intellivoid/support",
+        "dependencies": [
+            {"package": "net.intellivoid.acm", "version": "latest", "required": true},
+            {"package": "net.intellivoid.msqg", "version": "latest", "required": true}
+        ],
+        "configuration": {
+            "autoload_method": "indexed",
+            "main": null,
+            "post_installation": [],
+            "pre_installation": []
+        }
+    },
+    "components": [
+        {
+            "required": true,
+            "file": "Abstracts/ExceptionCodes.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/SupportTicketSearchMethod.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/TicketStatus.php"
+        },
+        {
+            "required": true,
+            "file": "AutoConfig.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/ConfigurationNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/DatabaseException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidEmailException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidMessageException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidSearchMethodException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidSourceException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidSubjectException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidTicketNotesException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/SupportTicketNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Managers/TicketManager.php"
+        },
+        {
+            "required": true,
+            "file": "Objects/SupportTicket.php"
+        },
+        {
+            "required": true,
+            "file": "Support.php"
+        },
+        {
+            "required": true,
+            "file": "Utilities/Hashing.php"
+        },
+        {
+            "required": true,
+            "file": "Utilities/Validation.php"
+        }
+    ],
+    "files": [
+        "configuration.ini",
+        "support.json"
+    ]
+}
